@@ -1,0 +1,4 @@
+# Everything needed to run the offline test suite (no API key required).
+-r requirements.txt
+pytest
+reportlab   # generates small PDFs for the RAG tests

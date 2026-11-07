@@ -1,0 +1,23 @@
+# Installs the shared helper package (llm_series) in editable mode,
+# so every project can do: from llm_series.config import ...
+-e .
+
+# --- LLM framework ----------------------------------------------------
+langchain>=1.0                 # create_agent (04, 05)
+langchain-core>=1.0
+langchain-google-genai>=4.0    # Gemini chat + embeddings (native)
+langchain-community            # PyPDFLoader, WikipediaQueryRun
+langchain-text-splitters       # RecursiveCharacterTextSplitter
+langchain-chroma               # Chroma vector store (03, 05)
+langchain-tavily               # TavilySearch (04, 05)
+
+# --- App and data -----------------------------------------------------
+streamlit
+python-dotenv
+numpy                          # 01: cosine similarity
+pandas                         # 05: analyze_data
+pypdf                          # PDF parser used by PyPDFLoader
+wikipedia                      # dependency of WikipediaAPIWrapper
+
+# Tested with: langchain 1.4.8, langchain-google-genai 4.4.2,
+# langchain-chroma 1.1.0, streamlit 1.66.1, pandas 3.0.5 (Python 3.13).

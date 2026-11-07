@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------------
+# Secrets — must NEVER reach the repository
+# ---------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ---------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------
+# Runtime data
+# ---------------------------------------------------------------------
+# Vector database, if a persistent Chroma directory is ever used
+chroma_db/
+.chroma/
+
+*.log
+*.tmp
+
+# Local test documents and datasets stay out of the repo
+uploads/
+
+# ---------------------------------------------------------------------
+# Editors and operating systems
+# ---------------------------------------------------------------------
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

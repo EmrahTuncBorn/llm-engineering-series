@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-series"
+version = "1.0.0"
+description = "Shared helpers for the LLM engineering progressive learning series"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["llm_series"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+filterwarnings = [
+    # langchain-community announced its sunset; the loaders used here still work.
+    "ignore:`langchain-community` is being sunset:DeprecationWarning",
+]
